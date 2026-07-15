@@ -1,16 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINE Itatiaia - Vagas Disponíveis</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+header{
+    background:#005baa;
+    color:white;
+    padding:30px;
+    text-align:center;
+}
+
+header h1{
+    margin-bottom:10px;
+}
+
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#005baa;
+    margin-bottom:20px;
+}
+
+.info{
+    margin:10px 0;
+    color:#555;
+}
+
+.status{
+    display:inline-block;
+    margin-top:15px;
+    padding:8px 14px;
+    border-radius:30px;
+    font-weight:bold;
+    color:white;
+}
+
+.aberto{
+    background:#28a745;
+}
+
+.fechado{
+    background:#dc3545;
+}
+
+.botao{
+    margin-top:20px;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#005baa;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#004080;
+}
+
+.botao.desativado{
+    background:#999;
+    pointer-events:none;
+}
+
+footer{
+    margin-top:60px;
+    background:#005baa;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+
 </head>
-<h1>teste git</h1>
-<h2>teste rafael</h2>
-
 <body>
-    <button>entrar</button>
-</body>
 
+<header>
+<h1>SINE Itatiaia</h1>
+<p>Vagas de Emprego Disponíveis</p>
+</header>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h2>COLETOR</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 10</p>
+<p class="info"><strong>Publicação:</strong> 24/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>VENDEDOR</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 3</p>
+<p class="info"><strong>Publicação:</strong> 24/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>AJUDANTE GERAL</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 1</p>
+<p class="info"><strong>Publicação:</strong> 24/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>AJUDANTE DE COZINHA</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 1</p>
+<p class="info"><strong>Publicação:</strong> 24/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>AUXILIAR / OPERADOR DE PRODUÇÃO</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 1</p>
+<p class="info"><strong>Publicação:</strong> 24/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>COZINHEIRO(A) / CHEFE DE COZINHA</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 1</p>
+<p class="info"><strong>Publicação:</strong> 24/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>VENDEDOR</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 3</p>
+<p class="info"><strong>Publicação:</strong> 23/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>BALCONISTA DE FARMÁCIA</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 2</p>
+<p class="info"><strong>Publicação:</strong> 22/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>OPERADOR DE LOGÍSTICA I</h2>
+<p class="info"><strong>Vagas:</strong> 7</p>
+<p class="info"><strong>Publicação:</strong> 22/01/2025</p>
+<span class="status fechado">Fechado para envio</span>
+<a href="#" class="botao desativado">Encerrada</a>
+</div>
+
+<div class="card">
+<h2>OPERADOR COMERCIAL E DE CAIXA</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 1</p>
+<p class="info"><strong>Publicação:</strong> 22/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>VENDEDOR EXTERNO</h2>
+<p class="info"><strong>Empresa:</strong> Operadora de Internet</p>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 6</p>
+<p class="info"><strong>Publicação:</strong> 22/01/2025</p>
+<span class="status aberto">Aberto para envio</span>
+<a href="#" class="botao">Ver detalhes</a>
+</div>
+
+<div class="card">
+<h2>ATENDENTE (BALCONISTA)</h2>
+<p class="info"><strong>Regime:</strong> CLT</p>
+<p class="info"><strong>Vagas:</strong> 1</p>
+<p class="info"><strong>Publicação:</strong> 22/01/2025</p>
+<span class="status fechado">Fechado para envio</span>
+<a href="#" class="botao desativado">Encerrada</a>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2025 Prefeitura de Itatiaia • SINE Itatiaia
+</footer>
+
+</body>
 </html>

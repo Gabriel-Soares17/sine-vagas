@@ -1,30 +1,35 @@
-=
-/*==================================================
+/*=========================================================
                 SINE ITATIAIA
         Portal de Vagas de Emprego
-==================================================*/
+=========================================================*/
 
 :root {
 
-    --verde: #0B5D39;
-    --verde-hover: #084A2D;
-    --verde-claro: #EAF6EF;
+    --verde: #0A5C36;
+    --verde-hover: #08472C;
 
-    --cinza: #F5F7F9;
+    --fundo: #F5F7FA;
+
     --branco: #FFFFFF;
 
     --texto: #27313A;
-    --texto-sec: #667085;
+    --texto2: #6B7280;
 
-    --borda: #E7EAEE;
+    --borda: #E7EBEF;
 
-    --sombra: 0 12px 35px rgba(0, 0, 0, .08);
+    --verde-status: #EAF8F0;
+    --verde-texto: #14804A;
+
+    --vermelho-status: #FDECEC;
+    --vermelho-texto: #C0392B;
+
+    --sombra: 0 8px 22px rgba(0, 0, 0, .06);
 
     --radius: 18px;
 
 }
 
-/*====================*/
+/*============================*/
 
 * {
 
@@ -34,31 +39,37 @@
 
 }
 
+html {
+
+    scroll-behavior: smooth;
+
+}
+
 body {
 
     font-family: 'Inter', sans-serif;
 
-    background: var(--cinza);
+    background: var(--fundo);
 
     color: var(--texto);
 
 }
 
-/*====================*/
+/*============================*/
 /* HEADER */
-/*====================*/
+/*============================*/
 
 header {
 
-    background: var(--verde);
+    background: linear-gradient(180deg, #0A5C36, #0C6A41);
 
-    color: #FFF;
-
-    padding: 65px 20px;
+    color: white;
 
     text-align: center;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+    padding: 65px 20px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .15);
 
 }
 
@@ -68,7 +79,7 @@ header h1 {
 
     font-weight: 700;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
 }
 
@@ -76,11 +87,11 @@ header p {
 
     font-size: 18px;
 
-    opacity: .92;
+    opacity: .95;
 
 }
 
-/*====================*/
+/*============================*/
 
 .container {
 
@@ -90,43 +101,47 @@ header p {
 
 }
 
-/*====================*/
+/*============================*/
 
 .cards {
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 
     gap: 28px;
 
 }
 
-/*====================*/
+/*============================*/
+/* CARD */
+/*============================*/
 
 .card {
 
     background: var(--branco);
 
-    border-radius: var(--radius);
-
-    padding: 28px;
-
     border: 1px solid var(--borda);
 
-    transition: .35s;
+    border-radius: 18px;
+
+    padding: 28px;
 
     display: flex;
 
     flex-direction: column;
 
+    transition: .35s;
+
     position: relative;
 
     overflow: hidden;
 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .03);
+
 }
 
-/* Barra verde */
+/* detalhe superior */
 
 .card::before {
 
@@ -136,13 +151,15 @@ header p {
 
     top: 0;
 
-    left: 0;
+    left: 25px;
 
-    width: 100%;
+    width: 70px;
 
     height: 5px;
 
     background: var(--verde);
+
+    border-radius: 0 0 10px 10px;
 
 }
 
@@ -154,27 +171,27 @@ header p {
 
 }
 
-/*====================*/
+/*============================*/
 
 .card h2 {
 
-    font-size: 22px;
-
     color: var(--verde);
 
-    margin-bottom: 20px;
+    font-size: 22px;
+
+    margin-bottom: 22px;
 
     line-height: 1.35;
 
 }
 
-/*====================*/
+/*============================*/
 
 .info {
 
-    color: var(--texto-sec);
+    margin-bottom: 12px;
 
-    margin-bottom: 10px;
+    color: var(--texto2);
 
     font-size: 15px;
 
@@ -186,17 +203,23 @@ header p {
 
 }
 
-/*====================*/
+/*============================*/
+/* STATUS */
+/*============================*/
 
 .status {
 
-    margin-top: 18px;
+    display: inline-flex;
 
     width: max-content;
 
-    padding: 8px 18px;
+    padding: 8px 16px;
 
     border-radius: 30px;
+
+    margin-top: 18px;
+
+    margin-bottom: 22px;
 
     font-size: 13px;
 
@@ -206,21 +229,23 @@ header p {
 
 .aberto {
 
-    background: #EAF8F0;
+    background: var(--verde-status);
 
-    color: #14804A;
+    color: var(--verde-texto);
 
 }
 
 .fechado {
 
-    background: #FDECEC;
+    background: var(--vermelho-status);
 
-    color: #C0392B;
+    color: var(--vermelho-texto);
 
 }
 
-/*====================*/
+/*============================*/
+/* BOTÃO */
+/*============================*/
 
 .botao {
 
@@ -228,11 +253,11 @@ header p {
 
     text-decoration: none;
 
+    text-align: center;
+
     background: var(--verde);
 
-    color: #FFF;
-
-    text-align: center;
+    color: white;
 
     padding: 14px;
 
@@ -240,7 +265,7 @@ header p {
 
     font-weight: 600;
 
-    transition: .3s;
+    transition: .30s;
 
 }
 
@@ -254,41 +279,71 @@ header p {
 
     background: #C7C7C7;
 
+    cursor: not-allowed;
+
     pointer-events: none;
 
 }
 
-/*====================*/
+/*============================*/
+/* FOOTER */
+/*============================*/
 
 footer {
 
     margin-top: 70px;
 
-    background: #FFF;
+    background: white;
 
     border-top: 1px solid var(--borda);
 
-    padding: 28px;
-
     text-align: center;
+
+    padding: 30px;
 
     color: #666;
 
 }
 
-/*====================*/
+/*============================*/
+/* SCROLLBAR */
+/*============================*/
 
-@media(max-width:768px) {
+::-webkit-scrollbar {
+
+    width: 9px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #0A5C36;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #F3F3F3;
+
+}
+
+/*============================*/
+/* RESPONSIVO */
+/*============================*/
+
+@media(max-width:900px) {
 
     header {
 
-        padding: 45px 20px;
+        padding: 55px 20px;
 
     }
 
     header h1 {
 
-        font-size: 32px;
+        font-size: 34px;
 
     }
 
@@ -298,9 +353,31 @@ footer {
 
     }
 
+}
+
+@media(max-width:700px) {
+
     .cards {
 
         grid-template-columns: 1fr;
+
+    }
+
+    .container {
+
+        width: 95%;
+
+    }
+
+    .card {
+
+        padding: 22px;
+
+    }
+
+    header h1 {
+
+        font-size: 30px;
 
     }
 

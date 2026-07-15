@@ -1,1 +1,343 @@
-.
+/* =====================================
+   SINE ITATIAIA
+   Portal de Vagas
+===================================== */
+
+:root {
+
+    --verde: #0A5C36;
+    --verde-hover: #084A2C;
+    --verde-claro: #EAF6EF;
+
+    --dourado: #D4AF37;
+
+    --cinza-fundo: #F4F6F8;
+    --cinza-card: #FFFFFF;
+    --cinza-borda: #E4E7EB;
+
+    --texto: #2F2F2F;
+    --texto-secundario: #666;
+
+    --vermelho: #C0392B;
+    --vermelho-bg: #FDECEC;
+
+    --verde-status: #0F8A4A;
+    --verde-bg: #E7F8EE;
+
+}
+
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    background: var(--cinza-fundo);
+
+    color: var(--texto);
+
+    line-height: 1.6;
+
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+
+    background: var(--verde);
+
+    color: #FFF;
+
+    text-align: center;
+
+    padding: 65px 20px;
+
+    border-bottom: 5px solid var(--dourado);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+
+}
+
+header h1 {
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+header p {
+
+    font-size: 18px;
+
+    opacity: .95;
+
+}
+
+/* ========================= */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: 45px auto;
+
+}
+
+/* ========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 28px;
+
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card {
+
+    background: var(--cinza-card);
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    border: 1px solid var(--cinza-borda);
+
+    border-left: 6px solid var(--verde);
+
+    transition: .35s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 310px;
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .10);
+
+}
+
+.card h2 {
+
+    color: var(--verde);
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+
+    line-height: 1.35;
+
+}
+
+/* ========================= */
+
+.info {
+
+    margin-bottom: 10px;
+
+    color: var(--texto-secundario);
+
+    font-size: 15px;
+
+}
+
+.info strong {
+
+    color: var(--texto);
+
+}
+
+/* ========================= */
+/* STATUS */
+/* ========================= */
+
+.status {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 15px;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.aberto {
+
+    background: var(--verde-bg);
+
+    color: var(--verde-status);
+
+}
+
+.fechado {
+
+    background: var(--vermelho-bg);
+
+    color: var(--vermelho);
+
+}
+
+/* ========================= */
+/* BOTÃO */
+/* ========================= */
+
+.botao {
+
+    margin-top: auto;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    background: var(--verde);
+
+    color: #FFF;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.botao:hover {
+
+    background: var(--verde-hover);
+
+}
+
+.desativado {
+
+    background: #BEBEBE;
+
+    pointer-events: none;
+
+}
+
+.desativado:hover {
+
+    background: #BEBEBE;
+
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+
+    margin-top: 60px;
+
+    background: #FFF;
+
+    border-top: 1px solid var(--cinza-borda);
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 15px;
+
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media(max-width:900px) {
+
+    header h1 {
+
+        font-size: 34px;
+
+    }
+
+    header p {
+
+        font-size: 17px;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    header {
+
+        padding: 45px 20px;
+
+    }
+
+    header h1 {
+
+        font-size: 28px;
+
+    }
+
+    header p {
+
+        font-size: 15px;
+
+    }
+
+    .container {
+
+        width: 95%;
+
+    }
+
+    .card {
+
+        padding: 22px;
+
+        min-height: auto;
+
+    }
+
+}

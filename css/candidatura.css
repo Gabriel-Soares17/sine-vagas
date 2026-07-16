@@ -1,40 +1,177 @@
-/*=========================================
-            FORMULÁRIO
-=========================================*/
+/*=========================================================
+            SINE ITATIAIA - FORMULÁRIO DE CANDIDATURA
+=========================================================*/
+
+:root {
+    --verde: #0A5C36;
+    --verde-hover: #08472C;
+    --fundo: #F5F7FA;
+    --branco: #FFF;
+    --texto: #27313A;
+    --texto2: #6B7280;
+    --borda: #E7EBEF;
+    --sombra: 0 10px 30px rgba(0, 0, 0, .08);
+    --radius: 18px;
+}
+
+/*==============================*/
+/* RESET */
+/*==============================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+/*==============================*/
+/* HEADER */
+/*==============================*/
+
+header {
+    background: linear-gradient(180deg, #0A5C36, #0C6A41);
+    color: #FFF;
+    text-align: center;
+    padding: 65px 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .15);
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: .95;
+}
+
+/*==============================*/
+/* CONTAINER */
+/*==============================*/
+
+.container {
+    width: min(92%, 900px);
+    margin: 40px auto 70px;
+}
+
+/*==============================*/
+/* FORMULÁRIO */
+/*==============================*/
 
 .formulario {
 
+    position: relative;
+
     background: #FFF;
 
-    padding: 40px;
+    border: 1px solid var(--borda);
 
     border-radius: 18px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
+    padding: 45px;
 
-    border: 1px solid #E7EBEF;
+    box-shadow: var(--sombra);
 
-    max-width: 900px;
+    overflow: hidden;
 
-    margin: auto;
+}
+
+.formulario::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 45px;
+
+    width: 90px;
+
+    height: 6px;
+
+    background: var(--verde);
+
+    border-radius: 0 0 10px 10px;
+
+}
+
+.voltar {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: var(--texto2);
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+    transition: .3s;
+
+}
+
+.voltar:hover {
+
+    color: var(--verde);
+
+    transform: translateX(-5px);
 
 }
 
 .formulario h2 {
 
-    color: #0A5C36;
+    color: var(--verde);
 
-    margin-bottom: 8px;
+    font-size: 34px;
+
+    margin-bottom: 10px;
 
 }
 
 .subtitulo {
 
+    color: var(--texto2);
+
     margin-bottom: 35px;
 
-    color: #666;
+    line-height: 1.6;
 
 }
+
+/*==============================*/
+/* GRID */
+/*==============================*/
+
+.duas-colunas {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+/*==============================*/
+/* CAMPOS */
+/*==============================*/
 
 .grupo {
 
@@ -48,53 +185,77 @@
 
 .grupo label {
 
-    margin-bottom: 8px;
+    font-size: 15px;
 
     font-weight: 600;
 
-    color: #27313A;
+    margin-bottom: 8px;
+
+    color: var(--texto);
 
 }
 
 .grupo input,
-.grupo textarea,
-.grupo select {
 
-    padding: 14px;
+.grupo select,
 
-    border: 1px solid #D8DDE3;
+.grupo textarea {
 
-    border-radius: 10px;
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #D8DEE5;
+
+    border-radius: 12px;
 
     font-size: 15px;
 
     font-family: inherit;
 
-    outline: none;
+    background: #FFF;
 
     transition: .3s;
+
+    outline: none;
+
+}
+
+.grupo textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
 
 }
 
 .grupo input:focus,
+
 .grupo textarea:focus,
+
 .grupo select:focus {
 
-    border-color: #0A5C36;
+    border-color: var(--verde);
 
-    box-shadow: 0 0 0 3px rgba(10, 92, 54, .15);
+    box-shadow: 0 0 0 4px rgba(10, 92, 54, .10);
+
+}
+
+/*==============================*/
+/* FILE */
+/*==============================*/
+
+input[type=file] {
+
+    padding: 13px;
+
+    cursor: pointer;
 
 }
 
-.duas-colunas {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-
-}
+/*==============================*/
+/* CHECKBOX */
+/*==============================*/
 
 .checkbox {
 
@@ -102,57 +263,156 @@
 
     align-items: flex-start;
 
-    gap: 10px;
+    gap: 12px;
 
     margin: 30px 0;
 
-    font-size: 14px;
+    padding: 18px;
 
-    color: #555;
+    background: #F8FAFC;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 12px;
 
 }
+
+.checkbox input {
+
+    margin-top: 4px;
+
+    accent-color: var(--verde);
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+.checkbox span {
+
+    color: var(--texto2);
+
+    line-height: 1.5;
+
+    font-size: 15px;
+
+}
+
+/*==============================*/
+/* BOTÃO */
+/*==============================*/
 
 button {
 
     width: 100%;
 
-    padding: 16px;
-
     border: none;
 
-    background: #0A5C36;
+    background: var(--verde);
 
     color: #FFF;
+
+    padding: 17px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
 
     font-size: 16px;
 
     font-weight: 600;
 
-    border-radius: 10px;
-
-    cursor: pointer;
-
     transition: .3s;
+
+    box-shadow: 0 5px 15px rgba(10, 92, 54, .18);
 
 }
 
 button:hover {
 
-    background: #08472C;
+    background: var(--verde-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(10, 92, 54, .28);
 
 }
 
-@media(max-width:700px) {
+/*==============================*/
+/* FOOTER */
+/*==============================*/
 
-    .duas-colunas {
+footer {
 
-        grid-template-columns: 1fr;
+    background: #FFF;
+
+    border-top: 1px solid var(--borda);
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #666;
+
+}
+
+/*==============================*/
+/* SCROLLBAR */
+/*==============================*/
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0A5C36;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3F3F3;
+}
+
+/*==============================*/
+/* RESPONSIVO */
+/*==============================*/
+
+@media(max-width:768px) {
+
+    header {
+
+        padding: 50px 20px;
+
+    }
+
+    header h1 {
+
+        font-size: 34px;
 
     }
 
     .formulario {
 
-        padding: 25px;
+        padding: 30px 22px;
+
+    }
+
+    .formulario::before {
+
+        left: 22px;
+
+    }
+
+    .formulario h2 {
+
+        font-size: 28px;
+
+    }
+
+    .duas-colunas {
+
+        grid-template-columns: 1fr;
 
     }
 

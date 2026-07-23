@@ -2,31 +2,24 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Detalhes da Vaga | SINE Itatiaia</title>
+
+    <link rel="stylesheet" href="/css/detalhes.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/css/detalhes.css">
-
 </head>
 
 <body>
 
     <header>
-
         <h1>SINE Itatiaia</h1>
-
         <p>Detalhes da Vaga</p>
-
     </header>
 
     <div class="container">
@@ -37,128 +30,76 @@
 
         <div class="vaga">
 
-            <h2>Auxiliar Administrativo</h2>
+            <!-- Título -->
+            <h2 id="titulo"></h2>
 
-            <span class="status aberto">
-                Recebendo currículos
-            </span>
+            <!-- Status -->
+            <span id="status" class="status"></span>
 
+            <!-- Dados rápidos -->
             <div class="dados">
 
                 <div>
-
-                    <strong>🏢 Empresa</strong>
-
-                    <p>Prefeitura de Itatiaia</p>
-
+                    <strong>Empresa</strong>
+                    <p id="empresa"></p>
                 </div>
 
                 <div>
-
-                    <strong>📍 Local</strong>
-
-                    <p>Itatiaia - RJ</p>
-
+                    <strong>Regime</strong>
+                    <p id="regime"></p>
                 </div>
 
                 <div>
-
-                    <strong>💼 Contrato</strong>
-
-                    <p>CLT</p>
-
+                    <strong>Salário</strong>
+                    <p id="salario"></p>
                 </div>
 
                 <div>
-
-                    <strong>💰 Salário</strong>
-
-                    <p>R$ 2.300,00</p>
-
+                    <strong>Local</strong>
+                    <p id="local"></p>
                 </div>
 
                 <div>
-
-                    <strong>👥 Vagas</strong>
-
-                    <p>4</p>
-
-                </div>
-
-                <div>
-
-                    <strong>🕒 Jornada</strong>
-
-                    <p>44 horas semanais</p>
-
-                </div>
-
-                <div>
-
-                    <strong>📅 Publicação</strong>
-
-                    <p>15/07/2026</p>
-
+                    <strong>Vagas</strong>
+                    <p id="vagas"></p>
                 </div>
 
             </div>
 
+            <!-- Descrição -->
             <section>
 
-                <h3>Descrição da vaga</h3>
+                <h3>Descrição</h3>
 
-                <p>
-
-                    Estamos em busca de um profissional organizado, proativo e comprometido para atuar no setor
-                    administrativo da empresa.
-
-                    Será responsável por auxiliar em atividades administrativas, atendimento ao público, organização de
-                    documentos e apoio aos demais setores.
-
-                </p>
+                <p id="descricao"></p>
 
             </section>
 
+            <!-- Requisitos -->
             <section>
 
                 <h3>Requisitos</h3>
 
-                <ul>
-
-                    <li>Ensino Médio Completo</li>
-
-                    <li>Conhecimento em Pacote Office</li>
-
-                    <li>Boa comunicação</li>
-
-                    <li>Experiência será um diferencial</li>
+                <ul id="requisitos">
 
                 </ul>
 
             </section>
 
+            <!-- Benefícios -->
             <section>
 
                 <h3>Benefícios</h3>
 
-                <ul>
-
-                    <li>Vale Transporte</li>
-
-                    <li>Vale Alimentação</li>
-
-                    <li>Plano de Saúde</li>
-
-                    <li>Seguro de Vida</li>
+                <ul id="beneficios">
 
                 </ul>
 
             </section>
 
-            <a href="candidatura.html" class="candidatar">
-
-                CANDIDATAR-SE
-
+            <!-- Botão -->
+            <a id="btn-candidatura" class="candidatar">
+                Candidatar-se
             </a>
 
         </div>
@@ -166,10 +107,10 @@
     </div>
 
     <footer>
-
-        <p>© 2026 Prefeitura de Itatiaia • SINE Itatiaia</p>
-
+        <p>© 2025 Prefeitura de Itatiaia • SINE Itatiaia</p>
     </footer>
+
+    <script src="/js/detalhes.js"></script>
 
 </body>
 

@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "titulo": "COLETOR",
+        "empresa": "Empresa X",
+        "regime": "CLT",
+        "salario": "R$ 2.100",
+        "local": "Itatiaia",
+        "vagas": 10,
+        "publicacao": "24/01/2025",
+        "status": "aberto",
+        "descricao": "Atuar na coleta de resíduos.",
+        "requisitos": [
+            "Ensino Fundamental",
+            "Disponibilidade de horário"
+        ],
+        "beneficios": [
+            "Vale Transporte",
+            "Vale Alimentação"
+        ]
+    },
+    {
+        "id": 2,
+        "titulo": "VENDEDOR",
+        "empresa": "",
+        "regime": "CLT",
+        "salario": "",
+        "local": "",
+        "vagas": 3,
+        "publicacao": "24/01/2025",
+        "status": "aberto",
+        "descricao": "",
+        "requisitos": [],
+        "beneficios": []
+    },
+    {
+        "id": 3,
+        "titulo": "AJUDANTE GERAL",
+        "empresa": "",
+        "regime": "CLT",
+        "salario": "",
+        "local": "",
+        "vagas": 1,
+        "publicacao": "24/01/2025",
+        "status": "aberto",
+        "descricao": "",
+        "requisitos": [],
+        "beneficios": []
+    }
+]
